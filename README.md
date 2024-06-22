@@ -27,7 +27,7 @@ Welcome to the Coffee Shop Site! This project is a dynamic and interactive websi
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/coffee-shop-site.git
+   git clone https://github.com/Mohamed-AbdElhamed99/ITI-JS-Project.git
    ```
 2. Navigate to the project directory:
    ```sh
