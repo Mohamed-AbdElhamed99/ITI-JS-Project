@@ -31,7 +31,7 @@ Welcome to the Coffee Shop Site! This project is a dynamic and interactive websi
    ```
 2. Navigate to the project directory:
    ```sh
-   cd coffee-shop-site
+   cd ITI-JS-Project
    ```
 3. Open `index.html` in your preferred web browser to view the site.
 
