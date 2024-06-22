@@ -6,8 +6,6 @@
 
 Welcome to the Coffee Shop Site! This project is a dynamic and interactive website for a coffee shop, built using pure JavaScript, HTML, CSS, and Bootstrap. The site offers various features to enhance user experience and manage product selections efficiently.
 
-## Features
-
 ### Main Features
 
 - **Back to Top Button**: Smoothly scroll back to the top of the page.
@@ -37,7 +35,7 @@ Welcome to the Coffee Shop Site! This project is a dynamic and interactive websi
    ```
 3. Open `index.html` in your preferred web browser to view the site.
 
-## Features
+## Usage
 
 - **Back to Top Button**: Click the button to scroll back to the top of the page.
 - **Image Slider**: Browse through the images using the slider.
@@ -53,8 +51,8 @@ If you wish to contribute to this project, please fork the repository and create
 
 ## Contact
 
-For any inquiries or feedback, please contact:
+For any inquiries or feedback, please contact US
 
-- Your Name
-- [Your Email Address](mohamedabdelhamed2e@gmail.com)
-- [GitHub](https://github.com/Mohamed-AbdElhamed99)
+- mohamedabdelhamed2e@gmail.com
+- https://github.com/Mohamed-AbdElhamed99
+- +201016806280
