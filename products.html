@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/products.css">
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark  d-flex justify-content-between">
+        <a class="navbar-brand" href="#">Mohamed Coffee</a>
+        <ul class="navbar-nav">
+            <li class="nav-item ">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link " href="products.html">Products</a>
+            </li>
+            <li class="nav-item" id="loginLink">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item d-none" id="cart">
+                <a class="nav-link" href="cart.html"><i class="fa fa-shopping-cart"></i> ( <span id="countCart"></span> )</a>
+            </li>
+            <li class="nav-item dropdown d-none" id="userName">
+              <a class="nav-link dropdown-toggle" href="#" id="userNameDeopdonw" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              </a>
+              <div class="dropdown-menu" aria-labelledby="userNameDeopdonw">
+                <a class="dropdown-item" id="logout">Logout</a>
+              </div>
+            </li>
+          </ul>
+      </nav>
+    
+      <div class="container" id="productContainer">
+        <div class="row">
+            <div class="col-2 border-right">
+                <h4 id="categoryListTitle">Categories</h4>
+                <ul class="categoryList">
+                    <li>
+                        <input type="radio" name="filter" class="custom-control-input" id="espresso" checked onchange="filter()">
+                        <label class="custom-control-label" for="espresso">Espresso-Based Coffees</label>
+                    </li>
+                    <li>
+                        <input class="custom-control-input" type="radio" name="filter" id="Brewed" onchange="filter()">
+                        <label class="custom-control-label" for="Brewed">Brewed Coffees</label>
+                    </li>
+                    <li>
+                        <input class="custom-control-input" type="radio" name="filter" id="Specialty" onchange="filter()">
+                        <label class="custom-control-label" for="Specialty">Specialty Coffees</label>
+                    </li>
+                    <li>
+                        <input class="custom-control-input" type="radio" name="filter" id="Flavored" onchange="filter()">
+                        <label class="custom-control-label" for="Flavored">Flavored Coffees</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-10" id="productsCategoriesList">
+                <!-- espresso products -->
+                <div class="" id="espressoProduct">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h1 class="productTitle">Espresso Coffee</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="card"  >
+                                <img src="images/img-7.png" class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Espresso</h5>
+                                    <p class="card-text description">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+                                    <p class="card-text price"><strong>Price: $<span class="priceAmount">10.04</span></strong></p>
+                                    <a class="btn btn-dark" onclick="addProduct(event)">Add to Cart</a>
+                                    <a class="btn btn-showdetails">Show Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-4">
+                            <div class="card" >
+                                <img src="images/img-8.png" class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Americano</h5>
+                                    <p class="card-text description">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+                                    <p class="card-text price"><strong>Price: $<span class="priceAmount">11.50</span></strong></p>
+                                    <a class="btn btn-dark" onclick="addProduct(event)">Add to Cart</a>
+                                    <a class="btn btn-showdetails">Show Details</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="images/img-9.png" class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Latte</h5>
+                                    <p class="card-text description">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+                                    <p class="card-text price"><strong>Price: $<span class="priceAmount">9.47</span></strong></p>
+                                    <a class="btn btn-dark" onclick="addProduct(event)">Add to Cart</a>
+                                    <a class="btn btn-showdetails">Show Details</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="images/img-10.png" class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cappuccino</h5>
+                                    <p class="card-text description">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+                                    <p class="card-text price"><strong>Price: $<span class="priceAmount">9.20</span></strong></p>
+                                    <a class="btn btn-dark" onclick="addProduct(event)">Add to Cart</a>
+                                    <a class="btn btn-showdetails">Show Details</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="images/img-2.png" class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Macchiato</h5>
+                                    <p class="card-text description">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+                                    <p class="card-text price"><strong>Price: $<span class="priceAmount">9.99</span></strong></p>
+                                    <a class="btn btn-dark" onclick="addProduct(event)">Add to Cart</a>
+                                    <a class="btn btn-showdetails">Show Details</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="images/img-3.png" class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Mocha</h5>
+                                    <p class="card-text description">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+                                    <p class="card-text price"><strong>Price: $<span class="priceAmount">10.99</span></strong></p>
+                                    <a class="btn btn-dark" onclick="addProduct(event)">Add to Cart</a>
+                                    <a class="btn btn-showdetails">Show Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- brewed products -->
+                <div class="d-none" id="brewedProduct">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h1 class="productTitle">Brewed Coffee</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="card"  >
+                                <img src="images/img-1.png" class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Drip Coffee</h5>
+                                    <p class="card-text description">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+                                    <p class="card-text price"><strong>Price: $<span class="priceAmount">5.40</span></strong></p>
+                                    <a class="btn btn-dark" onclick="addProduct(event)">Add to Cart</a>
+                                    <a class="btn btn-showdetails">Show Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-4">
+                            <div class="card" >
+                                <img src="images/img-2.png" class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">French Press</h5>
+                                    <p class="card-text description">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+                                    <p class="card-text price"><strong>Price: $<span class="priceAmount">6.99</span></strong></p>
+                                    <a class="btn btn-dark" onclick="addProduct(event)">Add to Cart</a>
+                                    <a class="btn btn-showdetails">Show Details</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="images/img-3.png" class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Pour Over</h5>
+                                    <p class="card-text description">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+                                    <p class="card-text price"><strong>Price: $<span class="priceAmount">9.99</span></strong></p>
+                                    <a class="btn btn-dark" onclick="addProduct(event)">Add to Cart</a>
+                                    <a class="btn btn-showdetails">Show Details</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="images/img-4.png" class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cold Brew</h5>
+                                    <p class="card-text description">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+                                    <p class="card-text price"><strong>Price: $<span class="priceAmount">20.99</span></strong></p>
+                                    <a class="btn btn-dark" onclick="addProduct(event)">Add to Cart</a>
+                                    <a class="btn btn-showdetails">Show Details</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="images/img-5.png" class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Turkish Coffee</h5>
+                                    <p class="card-text description">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+                                    <p class="card-text price"><strong>Price: $<span class="priceAmount">12.50</span></strong></p>
+                                    <a class="btn btn-dark" onclick="addProduct(event)">Add to Cart</a>
+                                    <a class="btn btn-showdetails">Show Details</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="images/img-6.png" class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Siphon Coffee</h5>
+                                    <p class="card-text description">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+                                    <p class="card-text price"><strong>Price: $<span class="priceAmount">5.00</span></strong></p>
+                                    <a class="btn btn-dark" onclick="addProduct(event)">Add to Cart</a>
+                                    <a class="btn btn-showdetails">Show Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Specialty products -->
+                <div class="d-none" id="specialtyProduct">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h1 class="productTitle">Specialty Coffee</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="card"  >
+                                <img src="images/img-4.png" class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Flat White</h5>
+                                    <p class="card-text description">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+                                    <p class="card-text price"><strong>Price: $<span class="priceAmount">10.99</span></strong></p>
+                                    <a class="btn btn-dark" onclick="addProduct(event)">Add to Cart</a>
+                                    <a class="btn btn-showdetails">Show Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-4">
+                            <div class="card" >
+                                <img src="images/img-7.png" class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cortado</h5>
+                                    <p class="card-text description">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+                                    <p class="card-text price"><strong>Price: $<span class="priceAmount">11.99</span></strong></p>
+                                    <a class="btn btn-dark" onclick="addProduct(event)">Add to Cart</a>
+                                    <a class="btn btn-showdetails">Show Details</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="images/img-9.png" class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Affogato</h5>
+                                    <p class="card-text description">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+                                    <p class="card-text price"><strong>Price: $<span class="priceAmount">4.50</span></strong></p>
+                                    <a class="btn btn-dark" onclick="addProduct(event)">Add to Cart</a>
+                                    <a class="btn btn-showdetails">Show Details</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="images/img-5.png" class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Nitro Coffee</h5>
+                                    <p class="card-text description">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+                                    <p class="card-text price"><strong>Price: $<span class="priceAmount">9.50</span></strong></p>
+                                    <a class="btn btn-dark" onclick="addProduct(event)">Add to Cart</a>
+                                    <a class="btn btn-showdetails">Show Details</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="images/img-3.png" class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Red Eye</h5>
+                                    <p class="card-text description">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+                                    <p class="card-text price"><strong>Price: $<span class="priceAmount">12.99</span></strong></p>
+                                    <a class="btn btn-dark" onclick="addProduct(event)">Add to Cart</a>
+                                    <a class="btn btn-showdetails">Show Details</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="images/img-2.png" class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Vienna Coffee</h5>
+                                    <p class="card-text description">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+                                    <p class="card-text price"><strong>Price: $<span class="priceAmount">7.99</span></strong></p>
+                                    <a class="btn btn-dark" onclick="addProduct(event)">Add to Cart</a>
+                                    <a class="btn btn-showdetails">Show Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flavored products -->
+                <div class="d-none" id="flavoredProduct">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h1 class="productTitle">Flavored Coffee</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="card"  >
+                                <img src="images/img-6.png" class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Caramel Latte</h5>
+                                    <p class="card-text description">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+                                    <p class="card-text price"><strong>Price: $<span class="priceAmount">6.99</span></strong></p>
+                                    <a class="btn btn-dark" onclick="addProduct(event)">Add to Cart</a>
+                                    <a class="btn btn-showdetails">Show Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-4">
+                            <div class="card" >
+                                <img src="images/img-5.png" class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Vanilla Cappuccino</h5>
+                                    <p class="card-text description">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+                                    <p class="card-text price"><strong>Price: $<span class="priceAmount">8.50</span></strong></p>
+                                    <a class="btn btn-dark" onclick="addProduct(event)">Add to Cart</a>
+                                    <a class="btn btn-showdetails">Show Details</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="images/img-4.png" class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Hazelnut Mocha</h5>
+                                    <p class="card-text description">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+                                    <p class="card-text price"><strong>Price: $<span class="priceAmount">13.00</span></strong></p>
+                                    <a class="btn btn-dark" onclick="addProduct(event)">Add to Cart</a>
+                                    <a class="btn btn-showdetails">Show Details</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="images/img-10.png" class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Pumpkin Spice Latte</h5>
+                                    <p class="card-text description">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+                                    <p class="card-text price"><strong>Price: $<span class="priceAmount">10.99</span></strong></p>
+                                    <a class="btn btn-dark" onclick="addProduct(event)">Add to Cart</a>
+                                    <a class="btn btn-showdetails">Show Details</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="images/img-9.png" class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cinnamon Dolce Latte</h5>
+                                    <p class="card-text description">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+                                    <p class="card-text price"><strong>Price: $<span class="priceAmount">9.50</span></strong></p>
+                                    <a class="btn btn-dark" onclick="addProduct(event)">Add to Cart</a>
+                                    <a class="btn btn-showdetails">Show Details</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="images/img-8.png" class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Peppermint Mocha</h5>
+                                    <p class="card-text description">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+                                    <p class="card-text price"><strong>Price: $<span class="priceAmount">6.75</span></strong></p>
+                                    <a class="btn btn-dark" onclick="addProduct(event)">Add to Cart</a>
+                                    <a class="btn btn-showdetails">Show Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    
+     <!-- footer -->
+      <div class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="footer-content">
+
+                <div class="footer-about">
+                  <h1>About</h1>
+                  <p class="footer_text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, a?</p>
+                </div>
+
+                <div class="footer-menu">
+                  <h1>Menu</h1>
+                  <ul class="footer_text">
+                    <li><a class="footer_text" href="">Home</a></li>
+                    <li><a class="footer_text" href="#aboutus">About us</a></li>
+                    <li><a class="footer_text" href="">Gallary</a></li>
+                    <li><a class="footer_text" href="#Contactus">Contact us</a></li>
+                  </ul>
+                </div>
+
+                <div class="footer-usefullinks">
+                  <h1>Usefull links</h1>
+                  <ul class="footer_text">
+                    <li><a class="footer_text" href="#">Lorem ipsum dolor sit.</a></li>
+                    <li><a class="footer_text" href="#">ipsum.</a></li>
+                    <li><a class="footer_text" href="#">dolor</a></li>
+                    <li><a class="footer_text" href="#">sit</a></li>
+                  </ul>
+                </div>
+
+                <div class="footer-contactus">  
+                  <h1>Contact us</h1>
+                  <ul class="footer_text">
+                    <li>Email:mohamedabdelhamed2e@gmail.com</li>
+                    <li>Address : Sadat City</li>
+                    <li>Call : +201016806280</li>
+                  </ul>
+                </div>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        2024 All Rights Reserved. Mohamed Abd Elhamed
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/back_to_top.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/products.js"></script>
+    <script src="./js/filter.js"></script>
+    <script src="./js/cart.js"></script>
+</body>
+</html>
+
